@@ -11,7 +11,6 @@ app.get('/receiver', (req, res) => {
 	res.sendFile(path.join(__dirname + '/public/receiver.html'));
 });
 
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, () => {

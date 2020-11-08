@@ -4,3 +4,14 @@ services:
   - docker
 before_install:
   - docker build -t dokumansky/webrtc-samples -f Dockerfile .
+deply:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "webrtc-samples"
+  env: "WebrtcSamples-env"
+  bucket_name: "elasticbeanstalk-us-west-2-730376649188"
+  bucket_path: "webrtc-samples"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY

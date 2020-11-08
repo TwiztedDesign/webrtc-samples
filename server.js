@@ -4,7 +4,7 @@ const app       = express();
 const port      = 80;
 
 app.get('/', (req, res) => {
-	res.send('Videoflow WebRTC Samples');
+	res.send('Videoflow WebRTC Samples (go to /streamer)');
 });
 
 app.get('/streamer', (req, res) => {

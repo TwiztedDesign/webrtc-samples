@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Receiver test page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<h1>Receiver test page</h1>
+<figure>
+    <div id="videoContainer">
+        <video id="stub"></video>
+    </div>
+    <div id="additional-controls" class="additcontrols">
+        <table id="tableconnection">
+            <tr>
+                <td class="namecolumn1">Signaling server:</td>
+                <td class="textcolumn"><input type="text" id="sigserverurl" value="" readonly /></td>
+                <td class="namecolumn2">Room name:</td>
+                <td><input type="text" id="roomname" readonly /></td>
+                <td class="buttoncolumn"><button id="connecttosigserv" type="button"
+                                                 data-state="disabled">Connect</button></td>
+            </tr>
+            <tr>
+                <td>Streaming from:</td>
+                <td colspan="3"><input type="text" id="targetpeer" readonly /></td>
+                <td><button id="connecttopeer" type="button" data-state="disabled">Connect</button></td>
+            </tr>
+            <tr>
+                <td>Received messages:</td>
+                <td colspan="3"><textarea id="received"></textarea></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Send message:</td>
+                <td colspan="3"><input type="text" id="message" value="A message to send" /></td>
+                <td><button id="sendmessage" type="button" data-state="message"
+                            title="Send message to peer">Send</button></td>
+            </tr>
+        </table>
+    </div>
+</figure>
+<script src="js/jquery.min.js"></script>
+<script src="js/simplewebrtc.bundle.js"></script>
+<script src="receiver.js"></script>
+</body>
+
+</html>

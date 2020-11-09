@@ -7,10 +7,10 @@ before_install:
 deply:
   provider: elasticbeanstalk
   region: "us-west-2"
-  app: "webrtc-samples"
-  env: "WebrtcSamples-env"
+  app: "webrtc"
+  env: "Webrtc-env"
   bucket_name: "elasticbeanstalk-us-west-2-730376649188"
-  bucket_path: "webrtc-samples"
+  bucket_path: "webrtc"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY

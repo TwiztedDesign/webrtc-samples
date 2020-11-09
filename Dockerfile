@@ -5,3 +5,4 @@ RUN npm install
 COPY . .
 CMD ["npm", "run", "start"]
 EXPOSE 80
+docker ps

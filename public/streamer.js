@@ -2,7 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const targetId = urlParams.get('target') || "target";
 const room = urlParams.get('room') || "room";
 // var signalingServer = 'https://rtc.medialooks.com:8889';
-let signalingServer = 'https://rtc.videoflow.io';
+// let signalingServer = 'https://rtc.videoflow.io';
+let signalingServer = 'https://simple-signal.herokuapp.com';
 // create webrtc connection
 var webrtc = new SimpleWebRTC({
 	target: targetId,
